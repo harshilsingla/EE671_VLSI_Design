@@ -1,0 +1,39 @@
+* NGSPICE file created from and3.ext - technology: sky130A
+
+.subckt and3 a b c y vdd vss
+X0 a_n556_94# b vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X1 y a_n556_94# vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.14 w=0.42 l=0.15
+**devattr s=1680,164 d=1680,164
+X2 a_n556_94# c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X3 a_n556_94# c vss vss sky130_fd_pr__nfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.42 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X4 a_n556_94# a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X5 vss a vss vss sky130_fd_pr__nfet_01v8 ad=0.504 pd=3.42 as=0.504 ps=3.42 w=1.26 l=0.15
+**devattr d=5040,332
+X6 y a_n556_94# vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X7 vss b vss vss sky130_fd_pr__nfet_01v8 ad=0.504 pd=3.42 as=0.504 ps=3.42 w=1.26 l=0.15
+**devattr d=5040,332
+C0 vdd c 0.058654f
+C1 vdd b 0.059095f
+C2 a_n556_94# c 0.069871f
+C3 a_n556_94# b 0.043629f
+C4 a_n556_94# vdd 0.936964f
+C5 y c 5.48e-20
+C6 vdd y 0.147252f
+C7 a b 0.024008f
+C8 a_n556_94# y 0.033754f
+C9 a vdd 0.060354f
+C10 a_n556_94# a 0.019769f
+C11 c b 0.024141f
+C12 y vss 0.165005f
+C13 c vss 0.311207f
+C14 b vss 0.307306f
+C15 a vss 0.337257f
+C16 vdd vss 2.25352f
+C17 a_n556_94# vss 0.751574f
+.ends
+

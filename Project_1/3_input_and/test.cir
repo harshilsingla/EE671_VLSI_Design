@@ -1,0 +1,39 @@
+* SkyWater PDK
+
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+Vdd vdd gnd DC 1.8
+V1 in1 gnd DC 0
+V2 in2 gnd DC 1.8
+V3 in3 gnd DC 1.8
+
+.subckt and3 a b c y vdd vss
+X0 a_n556_94# b vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X1 y a_n556_94# vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.14 w=0.42 l=0.15
+**devattr s=1680,164 d=1680,164
+X2 a_n556_94# c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X3 a_n556_94# c vss vss sky130_fd_pr__nfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.42 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X4 a_n556_94# a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X5 vss a vss vss sky130_fd_pr__nfet_01v8 ad=0.504 pd=3.42 as=0.504 ps=3.42 w=1.26 l=0.15
+**devattr d=5040,332
+X6 y a_n556_94# vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+X7 vss b vss vss sky130_fd_pr__nfet_01v8 ad=0.504 pd=3.42 as=0.504 ps=3.42 w=1.26 l=0.15
+**devattr d=5040,332
+.ends
+
+Xckt vdd vdd vdd out vdd gnd and3
+
+.tran 10ps 5ns
+
+.control
+run
+plot out
+.endc
+
+
+

@@ -1,0 +1,50 @@
+magic
+tech sky130A
+timestamp 1724946623
+<< nwell >>
+rect 190 116 331 278
+<< locali >>
+rect 466 103 488 112
+rect 464 94 488 103
+<< viali >>
+rect 6 97 23 116
+rect 291 97 308 116
+rect 154 50 174 72
+rect 439 50 459 72
+<< metal1 >>
+rect -1 274 32 300
+rect 197 274 319 300
+rect 0 116 31 124
+rect 285 116 316 124
+rect 0 97 6 116
+rect 23 97 291 116
+rect 308 97 316 116
+rect 0 89 31 97
+rect 285 89 316 97
+rect 146 72 184 80
+rect 332 72 467 80
+rect 146 50 154 72
+rect 174 50 439 72
+rect 459 50 467 72
+rect 146 42 184 50
+rect 332 42 467 50
+rect 3 0 34 27
+rect 199 0 318 27
+use inverter  inverter_0
+timestamp 1724937823
+transform 1 0 129 0 1 40
+box -129 -40 73 260
+use inverter  inverter_1
+timestamp 1724937823
+transform 1 0 414 0 1 40
+box -129 -40 73 260
+<< labels >>
+rlabel metal1 6 105 6 105 1 a
+port 3 n
+rlabel metal1 0 286 0 286 3 vdd
+port 1 e
+rlabel metal1 4 13 4 13 3 vss
+port 2 e
+rlabel locali 484 103 484 103 7 y
+port 4 w
+<< end >>

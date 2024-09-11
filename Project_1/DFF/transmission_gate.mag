@@ -1,0 +1,154 @@
+magic
+tech sky130A
+timestamp 1725947849
+<< nwell >>
+rect -100 76 73 238
+<< nmos >>
+rect 0 0 15 42
+<< pmos >>
+rect 0 94 15 220
+<< ndiff >>
+rect -40 32 0 42
+rect -40 10 -30 32
+rect -10 10 0 32
+rect -40 0 0 10
+rect 15 32 55 42
+rect 15 10 25 32
+rect 45 10 55 32
+rect 15 0 55 10
+<< pdiff >>
+rect -40 210 0 220
+rect -40 188 -30 210
+rect -10 188 0 210
+rect -40 168 0 188
+rect -40 146 -30 168
+rect -10 146 0 168
+rect -40 126 0 146
+rect -40 104 -30 126
+rect -10 104 0 126
+rect -40 94 0 104
+rect 15 210 55 220
+rect 15 188 25 210
+rect 45 188 55 210
+rect 15 168 55 188
+rect 15 146 25 168
+rect 45 146 55 168
+rect 15 126 55 146
+rect 15 104 25 126
+rect 45 104 55 126
+rect 15 94 55 104
+<< ndiffc >>
+rect -30 10 -10 32
+rect 25 10 45 32
+<< pdiffc >>
+rect -30 188 -10 210
+rect -30 146 -10 168
+rect -30 104 -10 126
+rect 25 188 45 210
+rect 25 146 45 168
+rect 25 104 45 126
+<< psubdiff >>
+rect -82 29 -40 42
+rect -82 11 -69 29
+rect -51 11 -40 29
+rect -82 0 -40 11
+<< nsubdiff >>
+rect -82 207 -40 220
+rect -82 189 -69 207
+rect -51 189 -40 207
+rect -82 165 -40 189
+rect -82 147 -69 165
+rect -51 147 -40 165
+rect -82 123 -40 147
+rect -82 105 -69 123
+rect -51 105 -40 123
+rect -82 94 -40 105
+<< psubdiffcont >>
+rect -69 11 -51 29
+<< nsubdiffcont >>
+rect -69 189 -51 207
+rect -69 147 -51 165
+rect -69 105 -51 123
+<< poly >>
+rect -9 261 25 269
+rect -9 244 1 261
+rect 18 244 25 261
+rect -9 235 25 244
+rect 0 220 15 235
+rect 0 76 15 94
+rect 0 42 15 55
+rect 0 -31 15 0
+rect -9 -39 25 -31
+rect -9 -56 1 -39
+rect 18 -56 25 -39
+rect -9 -65 25 -56
+<< polycont >>
+rect 1 244 18 261
+rect 1 -56 18 -39
+<< locali >>
+rect -9 261 25 269
+rect -9 244 1 261
+rect 18 244 25 261
+rect -9 235 25 244
+rect -75 218 -40 220
+rect -75 210 -5 218
+rect -75 207 -30 210
+rect -75 189 -69 207
+rect -51 189 -30 207
+rect -75 188 -30 189
+rect -10 188 -5 210
+rect -75 168 -5 188
+rect -75 165 -30 168
+rect -75 147 -69 165
+rect -51 147 -30 165
+rect -75 146 -30 147
+rect -10 146 -5 168
+rect -75 126 -5 146
+rect -75 123 -30 126
+rect -75 105 -69 123
+rect -51 105 -30 123
+rect -75 104 -30 105
+rect -10 104 -5 126
+rect -75 96 -5 104
+rect 17 210 53 218
+rect 17 188 25 210
+rect 45 188 53 210
+rect 17 168 53 188
+rect 17 146 25 168
+rect 45 146 53 168
+rect 17 126 53 146
+rect 17 104 25 126
+rect 45 104 53 126
+rect 17 96 53 104
+rect -75 73 -40 96
+rect -140 51 -40 73
+rect -75 40 -40 51
+rect 30 77 53 96
+rect 30 55 121 77
+rect 30 40 53 55
+rect -75 32 -5 40
+rect -75 29 -30 32
+rect -75 11 -69 29
+rect -51 11 -30 29
+rect -75 10 -30 11
+rect -10 10 -5 32
+rect -75 2 -5 10
+rect 17 32 53 40
+rect 17 10 25 32
+rect 45 10 53 32
+rect 17 2 53 10
+rect -75 0 -40 2
+rect -9 -39 25 -31
+rect -9 -56 1 -39
+rect 18 -56 25 -39
+rect -9 -65 25 -56
+<< labels >>
+rlabel locali -137 62 -137 62 3 a
+port 1 e
+rlabel locali 111 65 111 65 1 y
+port 2 n
+rlabel locali 8 263 8 263 1 s1
+port 3 n
+rlabel locali 7 -61 7 -61 1 s2
+port 4 n
+<< end >>

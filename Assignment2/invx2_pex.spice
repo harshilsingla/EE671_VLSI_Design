@@ -1,0 +1,26 @@
+* NGSPICE file created from invx2.ext - technology: sky130A
+
+.subckt inverter vss vdd a y
+X0 y a vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+**devattr s=1680,164 d=1680,164
+X1 y a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+C0 vdd a 0.119273f
+C1 vdd y 0.146586f
+C2 a y 0.031239f
+C3 y vss 0.168883f
+C4 a vss 0.333831f
+C5 vdd vss 0.633345f
+.ends
+
+.subckt invx2 vdd vss a y
+Xinverter_0 vss vdd a y inverter
+Xinverter_1 vss vdd a y inverter
+C0 a y 0.224642f
+C1 a vdd 0.173551f
+C2 vdd y 0.10086f
+C3 y vss 0.696799f
+C4 vdd vss 1.376589f
+C5 a vss 0.743433f
+.ends
+
