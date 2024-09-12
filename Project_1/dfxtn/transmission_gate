@@ -1,0 +1,111 @@
+magic
+tech sky130A
+timestamp 1726058540
+<< nwell >>
+rect -100 76 73 160
+<< nmos >>
+rect 0 0 15 42
+<< pmos >>
+rect 0 94 15 136
+<< ndiff >>
+rect -40 32 0 42
+rect -40 10 -30 32
+rect -10 10 0 32
+rect -40 0 0 10
+rect 15 32 55 42
+rect 15 10 25 32
+rect 45 10 55 32
+rect 15 0 55 10
+<< pdiff >>
+rect -40 126 0 136
+rect -40 104 -30 126
+rect -10 104 0 126
+rect -40 94 0 104
+rect 15 126 55 136
+rect 15 104 25 126
+rect 45 104 55 126
+rect 15 94 55 104
+<< ndiffc >>
+rect -30 10 -10 32
+rect 25 10 45 32
+<< pdiffc >>
+rect -30 104 -10 126
+rect 25 104 45 126
+<< psubdiff >>
+rect -82 29 -40 42
+rect -82 11 -69 29
+rect -51 11 -40 29
+rect -82 0 -40 11
+<< nsubdiff >>
+rect -82 123 -40 136
+rect -82 105 -69 123
+rect -51 105 -40 123
+rect -82 94 -40 105
+<< psubdiffcont >>
+rect -69 11 -51 29
+<< nsubdiffcont >>
+rect -69 105 -51 123
+<< poly >>
+rect -9 179 25 187
+rect -9 162 1 179
+rect 18 162 25 179
+rect -9 153 25 162
+rect 0 136 15 153
+rect 0 76 15 94
+rect 0 42 15 55
+rect 0 -15 15 0
+rect -9 -23 25 -15
+rect -9 -40 1 -23
+rect 18 -40 25 -23
+rect -9 -49 25 -40
+<< polycont >>
+rect 1 162 18 179
+rect 1 -40 18 -23
+<< locali >>
+rect -9 179 25 187
+rect -9 162 1 179
+rect 18 162 25 179
+rect -9 153 25 162
+rect -75 126 -5 136
+rect -75 123 -30 126
+rect -75 105 -69 123
+rect -51 105 -30 123
+rect -75 104 -30 105
+rect -10 104 -5 126
+rect -75 96 -5 104
+rect 17 126 53 136
+rect 17 104 25 126
+rect 45 104 53 126
+rect 17 96 53 104
+rect -75 73 -40 96
+rect -140 51 -40 73
+rect -75 40 -40 51
+rect 30 77 53 96
+rect 30 55 121 77
+rect 30 40 53 55
+rect -75 32 -5 40
+rect -75 29 -30 32
+rect -75 11 -69 29
+rect -51 11 -30 29
+rect -75 10 -30 11
+rect -10 10 -5 32
+rect -75 2 -5 10
+rect 17 32 53 40
+rect 17 10 25 32
+rect 45 10 53 32
+rect 17 2 53 10
+rect -75 0 -40 2
+rect -9 -23 25 -15
+rect -9 -40 1 -23
+rect 18 -40 25 -23
+rect -9 -49 25 -40
+<< labels >>
+rlabel locali -137 62 -137 62 3 a
+port 1 e
+rlabel locali 111 65 111 65 1 y
+port 2 n
+rlabel locali 8 181 8 181 1 s1
+port 3 n
+rlabel locali 7 -45 7 -45 1 s2
+port 4 n
+<< end >>

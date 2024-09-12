@@ -1,0 +1,9 @@
+* NGSPICE file created from transmission_gate.ext - technology: sky130A
+
+.subckt transmission_gate a y s1 s2
+X0 y s2 a a sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.6972 ps=5 w=0.42 l=0.15
+**devattr s=1680,164 d=1680,164
+X1 y s1 a a sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.6804 ps=5 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+.ends
+
