@@ -1,41 +1,49 @@
 * NGSPICE file created from and3.ext - technology: sky130A
 
-.subckt and3 a b c y vdd vss
-X0 vdd b y vdd sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.64 as=0.186667 ps=1.822222 w=0.42 l=0.15
+.subckt inverter vss vdd a y
+X0 y a vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X1 a_n1049_30# a y y sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+X1 y a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
+**devattr s=5040,332 d=5040,332
+.ends
+
+.subckt and3 a b c vdd vss
+Xinverter_0 vss vdd vss inverter_0/y inverter
+X0 vdd b vss vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.206267 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X2 vdd a y vdd sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.64 as=0.186667 ps=1.822222 w=0.42 l=0.15
+X1 a_n999_25# a vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.21 ps=2.05 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X3 y c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.186667 pd=1.822222 as=0.168 ps=1.64 w=0.42 l=0.15
+X2 vdd a vss vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.206267 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X4 y c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.186667 pd=1.822222 as=0.168 ps=1.64 w=0.42 l=0.15
+X3 vdd b vss vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.206267 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X5 vss c a_n650_30# y sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+X4 vss b vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X6 a_n916_30# a a_n1049_30# y sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+X5 a_n866_25# a a_n999_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X7 a_n1049_30# b a_n650_30# y sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+X6 a_n999_25# b a_n600_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X8 a_n650_30# c vss y sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+X7 vss c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X9 y a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.186667 pd=1.822222 as=0.168 ps=1.64 w=0.42 l=0.15
+X8 vss c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X10 y b vdd vdd sky130_fd_pr__pfet_01v8 ad=0.186667 pd=1.822222 as=0.168 ps=1.64 w=0.42 l=0.15
+X9 a_n600_25# b a_n733_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X11 y a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.186667 pd=1.822222 as=0.168 ps=1.64 w=0.42 l=0.15
+X10 vss c a_n334_25# vss sky130_fd_pr__nfet_01v8 ad=0.21 pd=2.05 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X12 a_n650_30# b a_n783_30# y sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+X11 vss a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X13 vss c a_n384_30# y sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+X12 vdd c vss vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.206267 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X14 a_n783_30# a a_n916_30# y sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+X13 a_n600_25# c vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.21 ps=2.05 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X15 a_n384_30# b a_n1049_30# y sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+X14 vss a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X16 vdd b y vdd sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.64 as=0.186667 ps=1.822222 w=0.42 l=0.15
+X15 vss c a_n600_25# vss sky130_fd_pr__nfet_01v8 ad=0.21 pd=2.05 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X17 vdd c y vdd sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.64 as=0.186667 ps=1.822222 w=0.42 l=0.15
+X16 a_n334_25# b a_n999_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
+**devattr s=1680,164 d=1680,164
+X17 a_n733_25# a a_n866_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
 .ends
 
