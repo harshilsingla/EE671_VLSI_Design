@@ -5,104 +5,105 @@ X0 y a vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 
 **devattr s=1680,164 d=1680,164
 X1 y a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.504 pd=3.32 as=0.504 ps=3.32 w=1.26 l=0.15
 **devattr s=5040,332 d=5040,332
-C0 vdd y 0.146586f
-C1 vdd a 0.119214f
+C0 a vdd 0.119273f
+C1 vdd y 0.146586f
 C2 a y 0.031239f
 C3 y vss 0.168883f
-C4 a vss 0.333517f
-C5 vdd vss 0.631079f
+C4 a vss 0.333831f
+C5 vdd vss 0.633345f
 .ends
 
-
-Xinverter_0 vss vdd vss inverter_0/y inverter
-X0 vdd b vss vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.206267 ps=2.008889 w=0.42 l=0.15
+.subckt and3 a b c y vdd vss
+Xinverter_0 vss vdd inverter_0/a y inverter
+X0 vdd b inverter_0/a vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X1 a_n999_25# a vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.21 ps=2.05 w=0.42 l=0.15
+X1 a_n999_25# a inverter_0/a vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X2 vdd a vss vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.206267 ps=2.008889 w=0.42 l=0.15
+X2 vdd a inverter_0/a vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X3 vdd b vss vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.206267 ps=2.008889 w=0.42 l=0.15
+X3 vdd b inverter_0/a vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X4 vss b vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
+X4 inverter_0/a b vdd vdd sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.64 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
 X5 a_n866_25# a a_n999_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
 X6 a_n999_25# b a_n600_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X7 vss c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
+X7 inverter_0/a c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.64 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X8 vss c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
+X8 inverter_0/a c vdd vdd sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.64 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
 X9 a_n600_25# b a_n733_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X10 vss c a_n334_25# vss sky130_fd_pr__nfet_01v8 ad=0.21 pd=2.05 as=0.168 ps=1.64 w=0.42 l=0.15
+X10 vss c a_n334_25# vss sky130_fd_pr__nfet_01v8 ad=0.224 pd=2.186667 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X11 vss a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
+X11 inverter_0/a a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.64 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X12 vdd c vss vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.206267 ps=2.008889 w=0.42 l=0.15
+X12 vdd c inverter_0/a vdd sky130_fd_pr__pfet_01v8 ad=0.224 pd=2.008889 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X13 a_n600_25# c vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.21 ps=2.05 w=0.42 l=0.15
+X13 a_n600_25# c vss vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.224 ps=2.186667 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X14 vss a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.206267 pd=2.008889 as=0.224 ps=2.008889 w=0.42 l=0.15
+X14 inverter_0/a a vdd vdd sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.64 as=0.224 ps=2.008889 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-X15 vss c a_n600_25# vss sky130_fd_pr__nfet_01v8 ad=0.21 pd=2.05 as=0.168 ps=1.64 w=0.42 l=0.15
+X15 vss c a_n600_25# vss sky130_fd_pr__nfet_01v8 ad=0.224 pd=2.186667 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
 X16 a_n334_25# b a_n999_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
 X17 a_n733_25# a a_n866_25# vss sky130_fd_pr__nfet_01v8 ad=0.168 pd=1.64 as=0.168 ps=1.64 w=0.42 l=0.15
 **devattr s=1680,164 d=1680,164
-C0 a_n999_25# vss 0.150022f
-C1 b a_n733_25# 0.00334f
-C2 b a_n866_25# 3.19e-19
-C3 vdd c 0.264665f
-C4 a_n999_25# a_n733_25# 0.085656f
-C5 c a_n334_25# 0.007454f
-C6 vdd a 0.256924f
-C7 a_n999_25# a_n866_25# 0.113065f
-C8 a_n600_25# c 0.074303f
-C9 a_n600_25# a 1.6e-19
-C10 a_n600_25# vdd 0.133176f
-C11 a_n600_25# a_n334_25# 0.085022f
-C12 c b 0.026556f
-C13 c inverter_0/y 6.52e-19
-C14 b a 0.016929f
-C15 c a_n999_25# 1.15e-19
-C16 vdd b 0.25469f
-C17 a_n999_25# a 0.049584f
-C18 b a_n334_25# 0.01116f
-C19 vss a_n733_25# 0.010625f
-C20 vdd a_n999_25# 0.011314f
-C21 vss a_n866_25# 0.01164f
-C22 a_n999_25# a_n334_25# 0.02646f
-C23 a_n600_25# b 0.074194f
-C24 a_n600_25# inverter_0/y 9.32e-19
-C25 a_n866_25# a_n733_25# 0.027838f
-C26 a_n600_25# a_n999_25# 0.199483f
-C27 b a_n999_25# 0.040516f
-C28 c vss 0.069447f
-C29 vss a 0.022471f
-C30 vdd vss 0.066585f
-C31 vss a_n334_25# 0.041332f
-C32 a a_n733_25# 0.003414f
-C33 c a_n866_25# 2.23e-20
-C34 a a_n866_25# 0.039048f
-C35 vdd a_n733_25# 0.003007f
-C36 vdd a_n866_25# 0.03959f
-C37 a_n600_25# vss 0.225985f
-C38 a_n600_25# a_n733_25# 0.027835f
-C39 b vss 0.021861f
-C40 a_n600_25# a_n866_25# 0.002615f
-C41 vss inverter_0/y 0.003726f
-C42 c 0 0.753723f
-C43 b 0 0.732893f
-C44 a 0 0.780577f
-C45 a_n334_25# 0 0.058021f
-C46 a_n600_25# 0 0.345021f
-C47 a_n733_25# 0 0.063189f
-C48 a_n866_25# 0 0.101209f
-C49 a_n999_25# 0 0.451803f
-C50 inverter_0/y 0 0.168883f
-C51 vss 0 1.556013f
-C52 vdd 0 4.344329f
+C0 a_n999_25# inverter_0/a 0.087636f
+C1 c a_n866_25# 2.23e-20
+C2 b c 0.026556f
+C3 a a_n866_25# 0.039048f
+C4 a_n999_25# c 1.15e-19
+C5 b a 0.016929f
+C6 a_n999_25# a 0.049584f
+C7 a_n600_25# a_n866_25# 0.002615f
+C8 inverter_0/a a_n334_25# 0.009416f
+C9 b a_n600_25# 0.074194f
+C10 a_n999_25# a_n600_25# 0.199483f
+C11 c a_n334_25# 0.007454f
+C12 b a_n866_25# 3.19e-19
+C13 a_n999_25# a_n866_25# 0.113065f
+C14 vdd a_n733_25# 0.003007f
+C15 b a_n999_25# 0.040516f
+C16 inverter_0/a vdd 1.430005f
+C17 a_n600_25# a_n334_25# 0.085022f
+C18 vdd y -2.84e-32
+C19 inverter_0/a a_n733_25# 0.039959f
+C20 c vdd 0.264664f
+C21 a vdd 0.254417f
+C22 inverter_0/a y 0.002486f
+C23 c inverter_0/a 0.087538f
+C24 b a_n334_25# 0.01116f
+C25 a a_n733_25# 0.003414f
+C26 c y 6.52e-19
+C27 a_n999_25# a_n334_25# 0.02646f
+C28 a inverter_0/a 0.097888f
+C29 a_n600_25# vdd 0.133176f
+C30 a_n600_25# a_n733_25# 0.027835f
+C31 a_n600_25# inverter_0/a 0.208894f
+C32 a_n866_25# vdd 0.03959f
+C33 a_n600_25# y 9.32e-19
+C34 b vdd 0.25469f
+C35 a_n600_25# c 0.074303f
+C36 a_n866_25# a_n733_25# 0.027838f
+C37 a_n999_25# vdd 0.011314f
+C38 a_n866_25# inverter_0/a 0.049768f
+C39 b a_n733_25# 0.00334f
+C40 a a_n600_25# 1.6e-19
+C41 a_n999_25# a_n733_25# 0.085656f
+C42 b inverter_0/a 0.077796f
+C43 vdd vss 2.994944f
+C44 c vss 0.735632f
+C45 b vss 0.676959f
+C46 a vss 0.707666f
+C47 a_n334_25# vss 0.089937f
+C48 a_n600_25# vss 0.362112f
+C49 a_n733_25# vss 0.033854f
+C50 a_n866_25# vss 0.06308f
+C51 a_n999_25# vss 0.514174f
+C52 y vss 0.167236f
+C53 inverter_0/a vss 1.03597f
 .ends
 
